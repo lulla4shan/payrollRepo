@@ -22,55 +22,50 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 public class BaseClass {
-	
+
 	WebDriver driver;
 	ScreenShotClass sh;
-	
+
 	public static Properties property;
 
-	public static void readProperty() throws IOException
-	{
+	public static void readProperty() throws IOException {
 		property = new Properties();
-		FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\resources\\Config.properties");
+		FileInputStream fs = new FileInputStream(
+				System.getProperty("user.dir") + "\\src\\main\\resources\\Config.properties");
 		property.load(fs);
 	}
-	
-	@BeforeSuite(alwaysRun=true)
-	  public void createReport(final ITestContext testContext) {
-		  extendReport.ExtentManager.createInstance().createTest(testContext.getName(), "message");
-	  }
-	
-	@Parameters({"browser"})
-  @BeforeMethod(groups = {"open"})
-  public void beforeMethod(String browserValue) throws IOException {
+
+	@BeforeSuite(alwaysRun = true)
+	public void createReport(final ITestContext testContext) {
+		extendReport.ExtentManager.createInstance().createTest(testContext.getName(), "message");
+	}
+
+	@Parameters({ "browser" })
+	@BeforeMethod(groups = { "open" })
+	public void beforeMethod(String browserValue) throws IOException {
 		readProperty();
-		if(browserValue.equalsIgnoreCase("edge"))
-		{
+		if (browserValue.equalsIgnoreCase("edge")) {
 
 			WebDriverManager.edgedriver().setup();
-	         driver=new EdgeDriver();
-		}
-		else if(browserValue.equalsIgnoreCase("chrome")) {
+			driver = new EdgeDriver();
+		} else if (browserValue.equalsIgnoreCase("chrome")) {
 
 			WebDriverManager.chromedriver().setup();
-			  driver=new ChromeDriver();
+			driver = new ChromeDriver();
 		}
 		driver.get(property.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-  }
+	}
 
-  @AfterMethod(groups = {"open"})
-  public void afterMethod(ITestResult itr) throws IOException {
-	  if(itr.getStatus() == ITestResult.FAILURE)
-	  {
-		  sh = new ScreenShotClass();
-		  sh.takeScreenShot(driver, itr.getName());
-	  }
-	  
-	 // driver.close();
-  }
+	@AfterMethod(groups = { "open" })
+	public void afterMethod(ITestResult itr) throws IOException {
+		if (itr.getStatus() == ITestResult.FAILURE) {
+			sh = new ScreenShotClass();
+			sh.takeScreenShot(driver, itr.getName());
+		}
 
-  
+		driver.close();
+	}
 
 }

@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\dell\eclipse-workspace\com.payrollAppProjectSample\crossBrowser.xml</span>
+                    <span>C:\Users\dell\git\repository5\com.payrollAppProjectSample\crossBrowser.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="executeClasses.ExecuteClientsPage" class="method navigator-link" hash-for-method="verifyClientSearch">verifyClientSearch</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="executeClasses.ExecuteTimesheetPage" class="method navigator-link" hash-for-method="f">f</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -121,18 +121,39 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">executeClasses.ExecuteClientsPage</span>
+              <span class="class-name">executeClasses.ExecuteTimesheetPage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyClientSearch">
-                  </a> <!-- verifyClientSearch -->
-                  <span class="method-name">verifyClientSearch</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Appu] but found [Amala p]
-	at executeClasses.ExecuteClientsPage.verifyClientSearch(ExecuteClientsPage.java:35)
+                  <a name="f">
+                  </a> <!-- f -->
+                  <span class="method-name">f</span>
+                  <div class="stack-trace">org.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=114.0.5735.134)
+Build info: version: &apos;4.9.0&apos;, revision: &apos;d7057100a6&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [18399011e5e31e55d90864750e9775c5, clickElement {id=71B5B712B29E1C3EC1A97E4EC7667A7C_element_121}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:65087}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65087/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (18399011e5e31e55d90864750e9775c5)] -&gt; xpath: //input[@id=&apos;file-logo&apos;]]
+Session ID: 18399011e5e31e55d90864750e9775c5
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy19.click(Unknown Source)
+	at utilities.GeneralUtilities.clickElement(GeneralUtilities.java:12)
+	at elementRepository.TimeSheetPageClass.clickBrowse(TimeSheetPageClass.java:40)
+	at executeClasses.ExecuteTimesheetPage.f(ExecuteTimesheetPage.java:25)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 33 stack frames
+... Removed 35 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -141,7 +162,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\dell\eclipse-workspace\com.payrollAppProjectSample\crossBrowser.xml</span>
+            <span class="header-content">C:\Users\dell\git\repository5\com.payrollAppProjectSample\crossBrowser.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -154,7 +175,7 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;ChromeTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;executeClasses.ExecuteClientsPage&quot;/&gt;
+      &lt;class name=&quot;executeClasses.ExecuteTimesheetPage&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ChromeTest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -196,14 +217,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyClientSearch')
-data.setCell(0, 2, 'executeClasses.ExecuteClientsPage')
-data.setCell(0, 3, 4042);
+data.setCell(0, 1, 'f')
+data.setCell(0, 2, 'executeClasses.ExecuteTimesheetPage')
+data.setCell(0, 3, 24204);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -229,24 +250,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">executeClasses.ExecuteClientsPage</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">executeClasses.ExecuteTimesheetPage</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">createReport(org.testng.TestRunner@374ccb9)</span>
+                <span class="method-name">createReport(org.testng.TestRunner@21edd891)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(chrome)</span>
-                <span class="method-start">107 ms</span>
+                <span class="method-start">178 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyClientSearch</span>
-                <span class="method-start">8879 ms</span>
+                <span class="method-name">f</span>
+                <span class="method-start">11913 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyClientSearch status=FAILURE method=ExecuteClientsPage.verifyClientSearch()[pr...)</span>
-                <span class="method-start">12931 ms</span>
+                <span class="method-name">afterMethod([TestResult name=f status=FAILURE method=ExecuteTimesheetPage.f()[pri:0, instance:executeClasses.Exe...)</span>
+                <span class="method-start">36137 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

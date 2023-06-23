@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import elementRepository.HomePage;
 import elementRepository.LoginPage;
+import retryAnalyzer.RetryAnalyzer;
 
 public class ExecuteLoginPage extends BaseClass{
 	
@@ -19,12 +20,12 @@ public class ExecuteLoginPage extends BaseClass{
 	  
   }
   
-  @Test(dataProvider = "DataProvider1",dataProviderClass = DataProviderLogin.class)
+  @Test(dataProvider = "DataProvider1",dataProviderClass = DataProviderLogin.class, retryAnalyzer = RetryAnalyzer.class)
   public void verifyUnsuccessfulLogin(String name, String pass) {
 	  lp = new LoginPage(driver);
 	  lp.login(name,pass);
 	  boolean act = lp.isIncorectMsgDisplayed();
-	  Assert.assertFalse(act);
+	  Assert.assertTrue(act);
 	  
   }
   

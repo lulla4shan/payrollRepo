@@ -7,14 +7,14 @@
   <test thread-count="5" name="ChromeTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="executeClasses.ExecuteClientsPage">
+      <class name="executeClasses.ExecuteTimesheetPage">
         <methods>
-          <include name="verifyClientSearch"/>
           <include name="afterMethod"/>
           <include name="createReport"/>
           <include name="beforeMethod"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- executeClasses.ExecuteClientsPage -->
+      </class> <!-- executeClasses.ExecuteTimesheetPage -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

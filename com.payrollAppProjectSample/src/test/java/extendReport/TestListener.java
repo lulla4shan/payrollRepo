@@ -1,18 +1,25 @@
 package extendReport;
 
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-
-import executeClasses.BaseClass;
-
-import java.awt.Desktop;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.apache.logging.log4j.util.PropertySource.Util;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
+import com.aventstack.extentreports.*;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+
+import executeClasses.BaseClass;
 
 
 public class TestListener extends BaseClass  implements ITestListener{
@@ -43,10 +50,10 @@ public class TestListener extends BaseClass  implements ITestListener{
         test.get().pass("Test passed");
     }
 
-    public synchronized void onTestFailure(ITestResult result) {
+  /*  public synchronized void onTestFailure(ITestResult result) {
         System.out.println((result.getMethod().getMethodName() + " failed!"));
         test.get().fail(result.getThrowable());
-    }
+    }*/
 
     public synchronized void onTestSkipped(ITestResult result) {
         System.out.println((result.getMethod().getMethodName() + " skipped!"));
@@ -61,6 +68,8 @@ public class TestListener extends BaseClass  implements ITestListener{
         return test;
     }
 
+	
+	
 
 }
 

@@ -13,8 +13,7 @@ import utilities.GeneralUtilities;
 
 public class ClientsPage {
 	
-	WebDriver driver;
-	
+	WebDriver driver;  
 	GeneralUtilities gl = new GeneralUtilities();
 	
 	

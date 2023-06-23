@@ -34,7 +34,8 @@ public class HomePage {
 	@FindBy(xpath = "//a[text()='Dashboard']")
 	WebElement dashboardTab;
 	
-	
+	@FindBy(xpath = "//a[text()='TimeSheet']")
+	WebElement timeSheet;
 	
 	public boolean isLogoDisplayed() {
 		ewait.explicitWaitPresenceOfElementsLocated(driver, "//img[@src='/payrollapp/images/logo.png']");
@@ -44,6 +45,10 @@ public class HomePage {
 	
 	public void clickOnClient() {
 		gl.clickElement(clientTab);
+	}
+	
+	public void clickOnTimesheet() {
+		gl.clickElement(timeSheet);
 	}
 	
 
